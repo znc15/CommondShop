@@ -71,7 +71,8 @@ public class commondshop extends JavaPlugin implements Listener {
             getLogger().info("bStats metrics enabled.");
         }
 
-        getLogger().info("commondshop plugin enabled.");
+        printStartupMessage();
+        getLogger().info("CommondShop plugin enabled.");
     }
 
     private boolean setupEconomy() {
@@ -143,9 +144,21 @@ public class commondshop extends JavaPlugin implements Listener {
         });
     }
 
+    private void printStartupMessage() {
+        String author = getDescription().getAuthors().get(0);
+        getLogger().info("==========================================");
+        getLogger().info(getDescription().getName());
+        getLogger().info("Version/版本: " + getDescription().getVersion());
+        getLogger().info("Author/作者: " + String.join(", ", getDescription().getAuthors()));
+        getLogger().info("QQ Group/QQ群: 690216634");
+        getLogger().info("Github: https://github.com/znc15/commondshop");
+        getLogger().info("-v-");
+        getLogger().info("==========================================");
+    }
+
     @Override
     public void onDisable() {
-        getLogger().info("commondshop plugin disabled.");
+        getLogger().info("CommondShop plugin disabled.");
     }
 
     private String getMessage(String key) {
