@@ -27,6 +27,7 @@ import java.net.URL;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 public class commondshop extends JavaPlugin implements Listener {
@@ -34,9 +35,8 @@ public class commondshop extends JavaPlugin implements Listener {
     private Economy economy;
     private PlayerPointsAPI playerPointsAPI;
     private FileConfiguration config;
-    private FileConfiguration langConfig;
-    private Map<String, String> messages = new HashMap<>();
-    private Map<UUID, String> pendingPurchases = new HashMap<>();
+    private final Map<String, String> messages = new HashMap<>();
+    private final Map<UUID, String> pendingPurchases = new HashMap<>();
     private static final String UPDATE_URL = "https://api.tcbmc.cc/update/commondshop/update.json";
     private static final String UPDATE_PAGE = "https://github.com/znc15/commondshop";
 
@@ -106,9 +106,9 @@ public class commondshop extends JavaPlugin implements Listener {
             saveResource(langFileName, false);
         }
 
-        langConfig = YamlConfiguration.loadConfiguration(langFile);
+        FileConfiguration langConfig = YamlConfiguration.loadConfiguration(langFile);
         for (String key : langConfig.getKeys(false)) {
-            messages.put(key, ChatColor.translateAlternateColorCodes('&', langConfig.getString(key)));
+            messages.put(key, ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(langConfig.getString(key))));
         }
     }
 
@@ -243,8 +243,13 @@ public class commondshop extends JavaPlugin implements Listener {
 
             if (transactionSuccess) {
                 ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
-                String formattedCommand = command.replace("{amount}", String.valueOf(amount)).replace("{player}", player.getName());
-                Bukkit.dispatchCommand(console, formattedCommand);
+                String formattedCommand = null;
+                if (command != null) {
+                    formattedCommand = command.replace("{amount}", String.valueOf(amount)).replace("{player}", player.getName());
+                }
+                if (formattedCommand != null) {
+                    Bukkit.dispatchCommand(console, formattedCommand);
+                }
                 player.sendMessage(getMessage("purchase_successful_message"));
                 pendingPurchases.remove(playerId);
             }
