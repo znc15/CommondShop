@@ -2,6 +2,9 @@ name: CommondShop
 version: 1.0.0
 main: com.littlesheep.commondshop
 api-version: 1.20
+author: YangXiaoMian
+depend: [Vault, PlayerPoints]
+
 commands:
   shop:
     description: Purchase items from the shop
