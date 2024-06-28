@@ -1,0 +1,16 @@
+# config.yml
+language: zh_cn
+update-check: true
+enable-metrics: true
+
+补签卡:
+  price: 1
+  currency: points
+  command: signin retroactivecard give {amount} {player}
+
+# 其他物品可以在这里添加
+# 示例：
+# 物品名称:
+#   price: 价格
+#   currency: 货币类型 (points 或 money)
+#   command: 执行的命令 (支持变量 {amount} 和 {player})

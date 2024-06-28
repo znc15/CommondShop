@@ -1,0 +1,12 @@
+name: CommondShop
+version: 1.0.0
+main: com.littlesheep.commondshop
+api-version: 1.20
+commands:
+  shop:
+    description: Purchase items from the shop
+    usage: /shop <item> <amount>
+permissions:
+  commondshop.reload:
+    description: Allows the player to reload the plugin configuration
+    default: op
