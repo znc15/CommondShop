@@ -1,10 +1,17 @@
-usage_message: "&c用法: /shop <物品> 然后输入数量"
-only_players_message: "&c只有玩家可以使用此命令。"
-invalid_amount_message: "&c无效的数量。请输入一个数字。"
-item_not_found_message: "&c未找到物品。"
-not_enough_points_message: "&c你没有足够的点券。"
-not_enough_money_message: "&c你没有足够的钱。"
-purchase_successful_message: "&a购买成功！"
-enter_amount_message: "&e请输入购买数量。"
-no_permission_message: "&c你没有权限执行此命令。"
-reload_success_message: "&a配置文件和语言文件已重新加载。"
+#       ____                                          _ ____  _
+#     / ___|___  _ __ ___  _ __ ___   ___  _ __   __| / ___|| |__   ___  _ __
+#    | |   / _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \ / _` \___ \| '_ \ / _ \| '_ \
+#    | |__| (_) | | | | | | | | | | | (_) | | | | (_| |___) | | | | (_) | |_) |
+#    \____\___/|_| |_| |_|_| |_| |_|\___/|_| |_|\__,_|____/|_| |_|\___/| .__/
+#                                                                      |_|
+#zh_cn.yml
+usage_message: "[Shop] &c用法: /shop <物品> <数量>"
+only_players_message: "[Shop] &c只有玩家可以使用此命令。"
+invalid_amount_message: "[Shop] &c无效的数量。请输入一个数字。"
+item_not_found_message: "[Shop] &c未找到物品。"
+not_enough_points_message: "[Shop] &c你没有足够的点券。"
+not_enough_money_message: "[Shop] &c你没有足够的钱。"
+purchase_successful_message: "[Shop] &a购买成功！"
+enter_amount_message: "[Shop] &e请输入购买数量。"
+no_permission_message: "[Shop] &c你没有权限执行此命令。"
+reload_success_message: "[Shop] &a配置文件和语言文件已重新加载。"

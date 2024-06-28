@@ -1,0 +1,17 @@
+#       ____                                          _ ____  _
+#     / ___|___  _ __ ___  _ __ ___   ___  _ __   __| / ___|| |__   ___  _ __
+#    | |   / _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \ / _` \___ \| '_ \ / _ \| '_ \
+#    | |__| (_) | | | | | | | | | | | (_) | | | | (_| |___) | | | | (_) | |_) |
+#    \____\___/|_| |_| |_|_| |_| |_|\___/|_| |_|\__,_|____/|_| |_|\___/| .__/
+#                                                                      |_|
+#en_us.yml
+usage_message: "[Shop] &cUsage: /shop <item> <amount>"
+only_players_message: "[Shop] &cOnly players can use this command."
+invalid_amount_message: "[Shop] &cInvalid amount. Please enter a number."
+item_not_found_message: "[Shop] &cItem not found."
+not_enough_points_message: "[Shop] &cYou don't have enough points."
+not_enough_money_message: "[Shop] &cYou don't have enough money."
+purchase_successful_message: "[Shop] &aPurchase successful!"
+enter_amount_message: "[Shop] &ePlease enter the purchase quantity."
+no_permission_message: "[Shop] &cYou do not have permission to execute this command."
+reload_success_message: "[Shop] &aConfiguration and language files reloaded successfully."
